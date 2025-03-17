@@ -17,7 +17,7 @@ export default async function Projects() {
                     <li key={project.id}>
                         <h2>{project.title.rendered}</h2>
                         <img src={project._embedded['wp:featuredmedia'][0].source_url} alt={project.title.rendered} />
-                        {/* <div dangerouslySetInnerHTML={{__html: project.content.rendered}} /> */}
+                        {/* <div dangerouslySetInnerHTML={{__html: project.content.rendered}} /> */} 
                     </li>
                 ))}
             </ul>
