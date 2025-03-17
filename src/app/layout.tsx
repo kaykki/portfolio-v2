@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body>
+            <body className="m-4">
                 {children}
                 <div>{projects}</div>
             </body>
