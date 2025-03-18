@@ -1,10 +1,13 @@
+import { fetchProjectData } from "@/utils/api";
+import Header from "@/components/Header";
+
 export default async function Project({
     params,
 } : {
     params: Promise<{ projectId: string }>;
 }) {
-    const projectId = (await params).projectId;
+    const projectData = await fetchProjectData((await params).projectId);
 
-    return <h1>Project {projectId}</h1>;
+    return <>{Header(projectData.title.rendered)}</>
 
 }
