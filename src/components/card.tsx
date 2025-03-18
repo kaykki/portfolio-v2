@@ -1,5 +1,11 @@
-export const Card = ({children} : {children: React.ReactNode}) => {
+export const Card = ({
+    children
+} : {
+    children: React.ReactNode
+}) => {
     return (
-        <div className="bg-white shadow-md rounded-lg p-6">{children}</div>
+        <section className="bg-white shadow-md rounded-lg p-4">
+            {children}
+        </section>
     );
 }
