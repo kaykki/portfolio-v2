@@ -6,6 +6,9 @@ import React from "react";
 export const metadata: Metadata = {
     title: "Kaki Kagatan",
     description: "Portfolio site of Kaki Kagatan",
+    other: {
+        "apple-mobile-web-app-title": "Kaki",
+    },
 };
 
 export default function RootLayout({
@@ -15,9 +18,6 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <head>
-                <meta name="apple-mobile-web-app-title" content="Kaki" />
-            </head>
             <body className="m-4">
                 {children}
                 <Footer />
