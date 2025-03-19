@@ -6,7 +6,7 @@ export default async function ProjectsList() {
     const projects = await fetchProjects();
 
     return (
-        <div>
+        <section>
             <h1>Projects</h1>
             <ul>
                 {projects.map((project: any) => (
@@ -18,6 +18,6 @@ export default async function ProjectsList() {
                     </li>
                 ))}
             </ul>
-        </div>
+        </section>
     );
 }

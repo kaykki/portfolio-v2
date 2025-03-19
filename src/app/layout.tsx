@@ -15,6 +15,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <head>
+                <meta name="apple-mobile-web-app-title" content="Kaki" />
+            </head>
             <body className="m-4">
                 {children}
                 <Footer />
