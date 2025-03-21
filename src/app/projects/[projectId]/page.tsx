@@ -11,6 +11,7 @@ export const generateMetadata = async ({params}: Props) : Promise<Metadata> => {
     return {
         title: projectData.title.rendered,
         description: projectData.acf.showcase.project_overview,
+        robots: "index, follow",
     };
 }
 
@@ -21,6 +22,8 @@ export default async function Project({
 }) {
     const projectData = await fetchProjectData((await params).projectId);
 
-    return <>{Header(projectData.title.rendered)}</>
+    return (
+        <>{Header(projectData.title.rendered)}</>
+    )
 
 }
