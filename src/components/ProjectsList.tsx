@@ -1,5 +1,6 @@
 import { fetchProjects } from "@/utils/api";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function ProjectsList() {
 
@@ -13,7 +14,7 @@ export default async function ProjectsList() {
                     <li key={project.id}>
                         <Link href={`/projects/${project.id}`}>
                             <h2>{project.title.rendered}</h2>
-                            <img src={project._embedded['wp:featuredmedia'][0].source_url} alt={project.title.rendered} />
+                            <Image src={project._embedded['wp:featuredmedia'][0].source_url} alt={project.title.rendered} width={326} height={79} loading="lazy"/>
                         </Link>
                     </li>
                 ))}

@@ -34,7 +34,6 @@ export default function Home() {
 								<rect width="25" height="25" rx="4" fill="#F0F0F0" />
 								<path d="M12.5 13.0149L4.01062 6H20.9894L12.5 13.0149ZM12.5 14.8739L4 7.85033V19H21V7.85033L12.5 14.8739Z" fill="#004D57" />
 							</svg>
-
 						</a>
 					</li>
 				</ul>
