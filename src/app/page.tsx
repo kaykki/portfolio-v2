@@ -4,15 +4,18 @@ import ProjectsList from '@/components/ProjectsList';
 
 export default function Home() {
 	return (
-		<main className='flex gap-4 flex-col'>
+		<main className='grid grid-cols-2 grid-rows-[auto_20%_57px_1fr] gap-4'>
 			{Header("Kaki Kagatan")}
-			<Image src='/portrait.jpg' alt='Portrait of Kaki Kagatan' width={139.34} height={148} className='rounded-2xl shadow-md' />
-			<section className='card'>
+			<div className='relative w-full h-full rounded-2xl shadow-md order-3'>
+				<Image src='/portrait.jpg' alt='Portrait of Kaki Kagatan' fill className='rounded-2xl object-cover' />
+			</div>
+			
+			<section className='card order-2 row-span-2'>
 				<h2>Font-End Developer and Designer</h2>
 				<p>Based in Vancouver B.C.</p>
 				<p>Focused on minimal and functional design</p>
 			</section>
-			<section className='w-fit card-coloured'>
+			<section className='w-fit h-fit card-coloured order-4'>
 				<ul className='flex gap-4'>
 					<li>
 						<a href="https://github.com/kaykki" target="_blank" rel="noopener noreferrer">
@@ -39,7 +42,7 @@ export default function Home() {
 				</ul>
 			</section>
 			<ProjectsList />
-			<section className='card'>
+			<section className='card order-6 col-span-2'>
 				<h2>Tech Stack</h2>
 			</section>
 		</main>

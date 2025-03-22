@@ -8,7 +8,7 @@ const gabrito = Gabarito({
 export default function Header(title: string) {
 
     return (
-        <header className='card-coloured w-fit'>
+        <header className='card-coloured w-full h-fit col-span-2'>
             <div className='flex items-center gap-4'>
                 <Link href={"/"}>
                     <svg width={36} height={43} viewBox="0 0 512 512" className='fill-[#F0F0F0]'>

@@ -7,7 +7,7 @@ export default async function ProjectsList() {
     const projects = await fetchProjects();
 
     return (
-        <section className="card-coloured">
+        <section className="card-coloured order-5 col-span-2">
             <h1>Projects</h1>
             <ul>
                 {projects.map((project: any) => (
