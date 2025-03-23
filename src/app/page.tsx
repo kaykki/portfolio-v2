@@ -1,22 +1,27 @@
 import Image from 'next/image';
 import Header from '@/components/Header';
 import ProjectsList from '@/components/ProjectsList';
+import { Gabarito } from 'next/font/google';
+
+const gabrito = Gabarito({
+	weight: '600'
+})
 
 export default function Home() {
 	return (
-		<main className='grid grid-cols-2 grid-rows-[auto_20%_57px_1fr] gap-4'>
+		<main className='w-[358px] grid grid-cols-[auto_auto] grid-rows-[74px_58px_57px_auto_auto] gap-4'>
 			{Header("Kaki Kagatan")}
-			<div className='relative w-full h-full rounded-2xl shadow-md order-3'>
-				<Image src='/portrait.jpg' alt='Portrait of Kaki Kagatan' fill className='rounded-2xl object-cover' />
-			</div>
+		
+				<Image src='/portrait.jpg' alt='Portrait of Kaki Kagatan' width={139.34} height={148} className='rounded-2xl shadow-md order-2 row-span-2' />
 			
-			<section className='card order-2 row-span-2'>
-				<h2>Font-End Developer and Designer</h2>
-				<p>Based in Vancouver B.C.</p>
-				<p>Focused on minimal and functional design</p>
+			
+			<section className='card order-3 row-span-2'>
+				<h2 className={`${gabrito.className} text-[16px]`}>Font-End Developer and Designer</h2>
+				<p className='text-[13px]'>Based in Vancouver B.C.</p>
+				<p className='text-[12px]'>Focused on minimal and functional design</p>
 			</section>
-			<section className='w-fit h-fit card-coloured order-4'>
-				<ul className='flex gap-4'>
+			<section className='w-full h-fit card-coloured order-4 items-center'>
+				<ul className='flex gap-4 items-center justify-center'>
 					<li>
 						<a href="https://github.com/kaykki" target="_blank" rel="noopener noreferrer">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className='fill-[#F0F0F0]'>
