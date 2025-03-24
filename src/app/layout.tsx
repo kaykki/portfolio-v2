@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 import React from "react";
 import { Props } from "@/utils/types";
-import Header from "@/components/Header";
+import { Fredoka } from 'next/font/google';
 
 export const metadata: Metadata = {
     title: "Kaki Kagatan",
@@ -14,18 +14,9 @@ export const metadata: Metadata = {
     },
 };
 
-// export default async function Project({
-//     params,
-// } : {
-//     params: Props;
-// }) {
-//     const projectData = await fetchProjectData((await params).projectId);
-
-//     return (
-//         <>{Header(projectData.title.rendered)}</>
-//     )
-
-// }
+const fredoka = Fredoka({
+    weight: '300'
+})
 
 export default function RootLayout({
     params,
@@ -36,7 +27,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className="m-4 justify-center items-center">
+            <body className={`${fredoka.className} m-4 justify-center items-center`}>
                 
                 {children}
                 <Footer />

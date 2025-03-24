@@ -17,8 +17,8 @@ export default function Home() {
 			
 			<section className='card order-3 row-span-2'>
 				<h2 className={`${gabrito.className} text-[16px]`}>Font-End Developer and Designer</h2>
-				<p className='text-[13px]'>Based in Vancouver B.C.</p>
-				<p className='text-[12px]'>Focused on minimal and functional design</p>
+				<p className="text-[13px]">Based in Vancouver B.C.</p>
+				<p className="text-[12px]">Focused on minimal and functional design</p>
 			</section>
 			<section className='w-full h-fit card-coloured order-4 items-center'>
 				<ul className='flex gap-4 items-center justify-center'>
