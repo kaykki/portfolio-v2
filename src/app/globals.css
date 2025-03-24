@@ -39,4 +39,8 @@ body {
 	.card {
 		@apply bg-secondary text-primary shadow-md rounded-lg p-4
 	}
+
+	.stack {
+		@apply px-2 py-[3px] bg-primary rounded-[4px] text-[10px] flex justify-center align-middle
+	}
 }
