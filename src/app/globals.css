@@ -3,6 +3,7 @@
 :root {
 	--background: #FFFFFF;
 	--foreground: #171717;
+
 }
 
 @theme inline {
@@ -10,6 +11,18 @@
 	--color-foreground: var(--foreground);
 	--font-sans: var(--font-geist-sans);
 	--font-mono: var(--font-geist-mono);
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+@theme {
+	--color-primary: #004D57;
+	--color-secondary: #F0F0F0;
+	--color-accent: #1E8572;
 }
 
 @layer components {
@@ -26,36 +39,23 @@
 	}
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #004D57;
-    --foreground: #ededed;
-  }
-
-  @layer components {
-	.card-coloured {
-		@apply bg-[#E0DED6] text-primary shadow-md rounded-lg p-4
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--background: #004D57;
+		--foreground: #ededed;
 	}
 
-	.card {
-		@apply bg-secondary text-primary shadow-md rounded-lg p-4
+	@layer components {
+		.card-coloured {
+			@apply bg-[#E1DEDB] text-primary shadow-md rounded-lg p-2
+		}
+
+		.card {
+			@apply bg-secondary text-primary shadow-md rounded-lg p-4
+		}
+
+		.stack {
+			@apply px-2 py-[3px] bg-primary rounded-[4px] text-[10px] flex justify-center align-middle
+		}
 	}
-
-	.stack {
-		@apply px-2 py-[3px] bg-primary rounded-[4px] text-[10px] flex justify-center align-middle
-	}
-}
-}
-
-body {
-	background: var(--background);
-	color: var(--foreground);
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-@theme {
-	--color-primary: #004D57;
-	--color-secondary: #F0F0F0;
-	--color-accent: #1E8572;
-}
-
+} */
