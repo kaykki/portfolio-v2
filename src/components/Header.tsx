@@ -11,7 +11,7 @@ export default function Header(title: string) {
         <header className='card-coloured w-[203px] h-[73px]'>
             <div className='flex items-center gap-4'>
                 <Link href={"/"}>
-                    <svg width={36} height={43} viewBox="0 0 512 512" className='fill-secondary'>
+                    <svg width={36} height={43} viewBox="0 0 512 512" className='link-icons'>
                         <g>
                             <path d="M46.82,20.5l-0.29,228.23c0,0,13.49,112.1,129.47,110.38l0.29-231.96C176.29,127.15,154.76,16.62,46.82,20.5z"
                             />

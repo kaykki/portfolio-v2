@@ -27,8 +27,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${fredoka.className} m-4 justify-center items-center`}>
-                
+            <body className={`${fredoka.className} m-4 justify-center items-center relative`}>
                 {children}
                 <Footer />
             </body>

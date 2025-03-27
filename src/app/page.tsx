@@ -9,7 +9,7 @@ const gabrito = Gabarito({
 
 export default function Home() {
 	return (
-		<main className='w-[358px] grid grid-cols-[auto_auto] grid-rows-[74px_58px_57px_auto_auto] gap-4'>
+		<main className='my-auto mx-auto w-[358px] grid grid-cols-[auto_auto] grid-rows-[74px_58px_57px_auto_auto] gap-4'>
 
 			{/* Header Component */}
 			{Header("Kaki Kagatan")}
