@@ -9,7 +9,7 @@ const gabrito = Gabarito({
 
 export default function Home() {
 	return (
-		<main className='my-auto mx-auto w-[358px] grid grid-cols-[auto_auto] grid-rows-[74px_58px_57px_auto_auto] gap-4'>
+		<main className='my-4 mx-auto w-[358px] grid grid-cols-[auto_auto] grid-rows-[74px_58px_57px_auto_auto] gap-4'>
 
 			{/* Header Component */}
 			{Header("Kaki Kagatan")}
@@ -56,9 +56,15 @@ export default function Home() {
 			<ProjectsList />
 
 			{/* Tech Stack */}
-			<section className='card order-6 col-span-2'>
-				<h2>Tech Stack</h2>
+			<section className='card order-6 col-span-2 relative'>
+				<ul className='flex gap-2 absolute top-0 right-4'>
+					<li className='tech-stack-facet'>All</li>
+					<li className='tech-stack-facet'>Development</li>
+					<li className='tech-stack-facet'>Design</li>
+				</ul>
+				<h2 className={`${gabrito.className} title mt-12`}>Tech Stack</h2>
 			</section>
 		</main>
+		
 	);
 }

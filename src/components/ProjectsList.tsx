@@ -7,8 +7,6 @@ const gabrito = Gabarito({
     weight: '600'
 })
 
-
-
 export default async function ProjectsList() {
 
     const projects = await fetchProjects();
