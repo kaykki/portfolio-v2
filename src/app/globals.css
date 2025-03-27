@@ -37,6 +37,9 @@ body {
 	.stack {
 		@apply px-2 py-[3px] bg-primary rounded-[4px] text-[10px] flex justify-center align-middle
 	}
+	.link-icons {
+		@apply fill-secondary hover:fill-accent
+	}
 }
 
 /* @media (prefers-color-scheme: dark) {
