@@ -2,12 +2,7 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import ThemeToggle from '@/components/ThemeToggle';
 import ProjectsList from '@/components/ProjectsList';
-import { Gabarito } from 'next/font/google';
 import Links from '@/components/Links';
-
-const gabrito = Gabarito({
-	weight: '600'
-})
 
 export default function Home() {
 	return (
@@ -20,20 +15,21 @@ export default function Home() {
 			<ThemeToggle />
 
 			{/* Portrait Image */}
-			<div className='rounded-2xl shadow-md order-2 row-span-2'>
+			<div className='shadow-md order-2 row-span-2'>
 				<Image 
 					src='/portrait.jpg' 
 					alt='Portrait of Kaki Kagatan' 
 					width={123} 
 					height={130} 
+					className='rounded-lg'
 				/>
 			</div>
 
 
 			{/* Description */}
-			<section className='card order-3 col-span-2 row-span-3'>
-				<h2 className={`${gabrito.className} text-[16px]`}>Font-End Developer & Designer</h2>
-				<p className="text-[13px]">Based in Vancouver B.C.</p>
+			<section className='card order-3 col-span-2 row-span-3 font-fredoka'>
+				<h2 className='font-gabarito text-[16px]'>Font-End Developer & Designer</h2>
+				<p className="text-[13px] font-fredoka">Based in Vancouver B.C.</p>
 				<p className="text-[13px]">Front-End Developer and Designer with a strong foundation in UI/UX principles. Passionate about creating optimized, functional, and user-friendly web experiences.</p>
 			</section>
 
@@ -50,7 +46,7 @@ export default function Home() {
 					<li className='tech-stack-facet'>Development</li>
 					<li className='tech-stack-facet'>Design</li>
 				</ul>
-				<h2 className={`${gabrito.className} title mt-12`}>Tech Stack</h2>
+				<h2 className='font-gabarito title mt-12'>Tech Stack</h2>
 			</section>
 		</main>
 
