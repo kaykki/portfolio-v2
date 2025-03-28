@@ -1,7 +1,7 @@
 export default function Links() {
     return (
-        <section className='w-full h-fit card-coloured order-4 items-center'>
-            <ul className='flex gap-4 items-center justify-center'>
+        <section className='card-coloured order-4 items-center'>
+            <ul className='flex gap-2 items-center justify-center'>
                 <li>
                     <a href="https://github.com/kaykki" target="_blank" rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" className='link-icons'>

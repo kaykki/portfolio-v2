@@ -12,7 +12,7 @@ export default async function ProjectsList() {
     const projects = await fetchProjects();
 
     return (
-        <section className="flex gap-4 flex-col card-coloured order-5 col-span-2 relative">
+        <section className="flex gap-4 flex-col card-coloured order-5 col-span-3 relative">
             <div className="bg-secondary px-4 py-2 flex gap-4 w-fit absolute top-0 right-4 rounded-b-xl">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
@@ -28,12 +28,14 @@ export default async function ProjectsList() {
             <h1 className={`${gabrito.className} text-2xl mt-8`}>Projects</h1>
             <ul className="flex flex-col gap-4 items-center justify-center">
                 {projects.map((project: any) => (
-                    <li key={project.id} className="w-[326px] h-[79px] relative p-4">
+                    <li key={project.id} className="w-[326px] h-[85px] relative p-4">
                         <Link href={`/projects/${project.id}`}>
                             <div className="absolute inset-0 bg-black rounded-md"></div>
                             <Image src={project._embedded['wp:featuredmedia'][0].source_url} alt={project.title.rendered} fill loading="lazy" className="object-cover rounded-md opacity-29" />
-                            <div className="absolute z-20">
+                            <div className="absolute flex flex-col gap-2 z-20">
                                 <h2 className={`${gabrito.className} text-secondary`}>{project.title.rendered}</h2>
+
+                                {/* Tech Stack */}
                                 <ul className="flex gap-2 items-center justify-center">
                                     {project.acf.development.tools.map((tools: any) => (
                                         <li key={tools.term_id} className="stack">{tools.name}</li>
