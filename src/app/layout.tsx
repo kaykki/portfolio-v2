@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import "./globals.css";
 import React from "react";
-import { Fredoka } from 'next/font/google';
-import { Gabarito } from 'next/font/google';
+import fonts from "@/utils/fonts";
+
 
 export const metadata: Metadata = {
     title: "Kaki Kagatan",
@@ -14,16 +14,6 @@ export const metadata: Metadata = {
     },
 };
 
-const fredoka = Fredoka({
-    weight: '300',
-    variable: '--font-fredoka'
-})
-
-const gabarito = Gabarito({
-	weight: '600',
-	variable: '--font-gabarito'
-})
-
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -32,7 +22,7 @@ export default function RootLayout({
     
     return (
         <html lang="en">
-            <body className={`${fredoka.variable} ${gabarito.variable}`}>
+            <body className={`${fonts.fredoka.variable} ${fonts.gabarito.variable}`}>
                 {children}
                 <Footer />
             </body>
