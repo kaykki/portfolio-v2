@@ -1,6 +1,14 @@
 export default function Links() {
     return (
-        <section className='card-coloured order-4 items-center'>
+        <section className='
+            order-4
+            card-coloured  
+            flex
+            flex-col
+            gap-2
+            items-center'
+        >
+            <h2 className="font-gabarito text-xs">Connect</h2>
             <ul className='flex gap-2 items-center justify-center'>
                 <li>
                     <a href="https://github.com/kaykki" target="_blank" rel="noopener noreferrer">

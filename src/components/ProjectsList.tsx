@@ -12,7 +12,7 @@ export default async function ProjectsList() {
     const projects = await fetchProjects();
 
     return (
-        <section className="flex gap-4 flex-col card-coloured order-5 col-span-3 relative">
+        <section className="flex gap-4 flex-col card-coloured order-5 col-span-2 relative">
             <div className="bg-secondary px-4 py-2 flex gap-4 w-fit absolute top-0 right-4 rounded-b-xl">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
