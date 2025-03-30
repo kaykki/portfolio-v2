@@ -1,11 +1,6 @@
 import { fetchProjects } from "@/utils/api";
 import Link from "next/link";
 import Image from "next/image";
-import { Gabarito } from 'next/font/google';
-
-const gabrito = Gabarito({
-    weight: '600'
-})
 
 export default async function ProjectsList() {
 
@@ -25,7 +20,7 @@ export default async function ProjectsList() {
                     </g>
                 </svg>
             </div>
-            <h1 className={`${gabrito.className} text-2xl mt-8`}>Projects</h1>
+            <h1 className="font-gabarito text-2xl mt-8">Projects</h1>
             <ul className="flex flex-col gap-4 items-center justify-center">
                 {projects.map((project: any) => (
                     <li key={project.id} className="w-[326px] h-[85px] relative p-4">
@@ -33,7 +28,7 @@ export default async function ProjectsList() {
                             <div className="absolute inset-0 bg-black rounded-md"></div>
                             <Image src={project._embedded['wp:featuredmedia'][0].source_url} alt={project.title.rendered} fill loading="lazy" className="object-cover rounded-md opacity-29" />
                             <div className="absolute flex flex-col gap-2 z-20">
-                                <h2 className={`${gabrito.className} text-secondary`}>{project.title.rendered}</h2>
+                                <h2 className="font-gabarito text-secondary">{project.title.rendered}</h2>
 
                                 {/* Tech Stack */}
                                 <ul className="flex gap-2 items-center justify-center">
