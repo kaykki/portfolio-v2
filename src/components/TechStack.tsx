@@ -15,14 +15,14 @@ export default function TechStack() {
 
     return (
         <section className='card order-6 col-span-2 relative'>
-            <ul className='flex gap-2 absolute top-0 right-4'>
+            <ul className='font-gabarito flex gap-2 absolute top-0 right-4'>
                 <li className={`${category == "" ? "bg-accent" : ""} tech-stack-facet`} onClick={() => setCategory("")}>All</li>
                 <li className={`${category == "development" ? "bg-accent" : ""} tech-stack-facet`} onClick={() => setCategory("development")}>Development</li>
                 <li className={`${category == "design" ? "bg-accent" : ""} tech-stack-facet`} onClick={() => setCategory("design")}>Design</li>
             </ul>
             <h2 className='font-gabarito title mt-12 mb-4'>Tech Stack</h2>
 
-            <ul className="flex flex-wrap gap-2">
+            <ul className="font-fredoka flex flex-wrap gap-2">
                 {currentStack.map((stackItem) =>(
                     <li key={stackItem.term_id} className="stack">{stackItem.name}</li>
                 ))}

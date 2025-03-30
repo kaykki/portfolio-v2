@@ -8,6 +8,7 @@ export default async function ProjectsList() {
 
     return (
         <section className="flex gap-4 flex-col card-coloured order-5 col-span-2 relative">
+
             <div className="bg-secondary px-4 py-2 flex gap-4 w-fit absolute top-0 right-4 rounded-b-xl">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
@@ -28,6 +29,13 @@ export default async function ProjectsList() {
                             <div className="absolute inset-0 bg-black rounded-md"></div>
                             <Image src={project._embedded['wp:featuredmedia'][0].source_url} alt={project.title.rendered} fill loading="lazy" className="object-cover rounded-md opacity-29" />
                             <div className="absolute flex flex-col gap-2 z-20">
+                                <svg
+                                    className="absolute top-0 right-0"
+                                    width="16"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path className="fill-primary" d="m12.002 2.005c5.518 0 9.998 4.48 9.998 9.997 0 5.518-4.48 9.998-9.998 9.998-5.517 0-9.997-4.48-9.997-9.998 0-5.517 4.48-9.997 9.997-9.997zm0 8c-.414 0-.75.336-.75.75v5.5c0 .414.336.75.75.75s.75-.336.75-.75v-5.5c0-.414-.336-.75-.75-.75zm-.002-3c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1z"/>
+                                </svg>
                                 <h2 className="font-gabarito text-secondary">{project.title.rendered}</h2>
 
                                 {/* Tech Stack */}
