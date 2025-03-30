@@ -1,10 +1,10 @@
-import { fetchAboutMe } from "@/utils/api"
+import { fetchTechStack } from "@/utils/api"
 
 export default async function TechStack() {
 
-    const about = await fetchAboutMe();
+    const about = await fetchTechStack();
 
-    console.log(about.acf);
+    console.log(about);
     
     return (
         <section className='card order-6 col-span-2 relative'>

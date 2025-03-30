@@ -28,9 +28,16 @@ export async function fetchIntro() {
     return intro.acf.intro_paragraph;
 }
 
-export async function fetchTechStack(category: string) {
-    const aboutMe = await fetchAboutMe
+export async function fetchTechStack(category?: string) {
+    const aboutMe = await fetchAboutMe();
 
-
+    switch (category) {
+        case "development":
+            return [...aboutMe.acf.languages, ...aboutMe.acf.frameworks];
+        case "design":
+            return aboutMe.acf.design_tools;
+        default:
+            return [...aboutMe.acf.languages, ...aboutMe.acf.frameworks, ...aboutMe.acf.design_tools];
+    }
 }
 
