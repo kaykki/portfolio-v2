@@ -30,10 +30,7 @@ export async function fetchIntro() {
 
 export async function fetchTechStack(category?: string) {
     const aboutMe = await fetchAboutMe();
-
-    console.log(aboutMe.acf.tech_stack.development);
     
-
     switch (category) {
         case "development":
             return [...aboutMe.acf.tech_stack.development];

@@ -3,22 +3,19 @@
 import { useState, useEffect, use } from "react";
 import { fetchTechStack } from "@/utils/api"
 import { Stack } from "@/utils/types";
+import Image from "next/image";
 
 export default function TechStack() {
 
     const [category, setCategory] = useState("");
     const [currentStack, currentSetStack] = useState<Stack[]>([]);
    
-
     useEffect(() => {
         fetchTechStack(category).then(data => currentSetStack(data)); 
     }, [category]);
 
-    console.log(currentStack[0].icon);
-    
-
     return (
-        <section className='card order-6 col-span-2 relative h-64'>
+        <section className='card order-6 col-span-2 relative'>
             <ul className='font-gabarito flex gap-2 absolute top-0 right-4'>
                 <li className={`${category == "" ? "bg-accent" : ""} tech-stack-facet`} 
                     onClick={() => setCategory("")}>
@@ -38,7 +35,8 @@ export default function TechStack() {
             <ul className="font-fredoka flex flex-wrap gap-2">
                 {currentStack.map((stackItem) =>(
                     <li key={stackItem.icon.id} 
-                        className="stack">
+                        className="stack py-2 flex gap-2 items-center">
+                        <Image src={stackItem.icon.url} alt="" width={20} height={20}></Image>
                         {stackItem.name}
                     </li>
                 ))}
