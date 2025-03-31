@@ -4,6 +4,9 @@ export type Props = {
 }
 
 export type Stack = {
-    term_id: string;
+    icon: {
+        id: string,
+        url: string
+    };
     name: string;
 }

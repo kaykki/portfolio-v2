@@ -27,7 +27,6 @@ export default function Home() {
 				/>
 			</div>
 
-
 			{/* Description */}
 			<section className='order-3 card row-span-2 font-fredoka flex flex-col gap-2'>
 				<div>

@@ -15,7 +15,7 @@ export async function fetchProjectData(id: string) {
 }
 
 export async function fetchAboutMe() {
-    const response = await fetch(`https://kayki.ca/portfolio/wp-json/wp/v2/pages/98?_embed`);
+    const response = await fetch(`https://kayki.ca/portfolio/wp-json/wp/v2/pages/98?_=${new Date().getTime()}`);
     
     if(!response.ok) throw new Error("Failed to fetch about me data");
     
@@ -31,13 +31,16 @@ export async function fetchIntro() {
 export async function fetchTechStack(category?: string) {
     const aboutMe = await fetchAboutMe();
 
+    console.log(aboutMe.acf.tech_stack.development);
+    
+
     switch (category) {
         case "development":
-            return [...aboutMe.acf.languages, ...aboutMe.acf.frameworks];
+            return [...aboutMe.acf.tech_stack.development];
         case "design":
-            return aboutMe.acf.design_tools;
+            return [...aboutMe.acf.tech_stack.design];
         default:
-            return [...aboutMe.acf.languages, ...aboutMe.acf.frameworks, ...aboutMe.acf.design_tools];
+            return [...aboutMe.acf.tech_stack.development, ...aboutMe.acf.tech_stack.design];
     }
 }
 

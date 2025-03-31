@@ -21,7 +21,7 @@ export default async function ProjectsList() {
                     </g>
                 </svg>
             </div>
-            <h1 className="font-gabarito text-2xl mt-8">Projects</h1>
+            <h2 className="font-gabarito text-2xl mt-8">Projects</h2>
             <ul className="flex flex-col gap-4 items-center justify-center">
                 {projects.map((project: any) => (
                     <li key={project.id} className="w-[326px] h-[85px] relative p-4">
