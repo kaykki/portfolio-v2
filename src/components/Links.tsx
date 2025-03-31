@@ -8,7 +8,6 @@ export default function Links() {
             gap-2
             items-center'
         >
-            <h2 className="font-gabarito text-xs">Connect</h2>
             <ul className='flex gap-2 items-center justify-center'>
                 <li>
                     <a href="https://github.com/kaykki" target="_blank" rel="noopener noreferrer">

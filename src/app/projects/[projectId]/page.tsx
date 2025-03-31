@@ -7,7 +7,6 @@ import { Props } from "@/utils/types";
 export const generateMetadata = async ({params}: Props) : Promise<Metadata> => {
     const projectData = await fetchProjectData((await params).projectId);
 
-    console.log(projectData);
     return {
         title: projectData.title.rendered,
         description: projectData.acf.showcase.project_overview,
@@ -23,7 +22,18 @@ export default async function Project({
     const projectData = await fetchProjectData((await params).projectId);
 
     return (
-        <>{Header(projectData.title.rendered)}</>
+        <main className="mobile-layout">
+            {Header(projectData.title.rendered)}
+            <video autoPlay className="order-2 col-span-2 rounded-md shadow-md">
+                <source 
+                    src={projectData.acf.showcase.project_preview.url} 
+                    type={projectData.acf.showcase.project_preview.mime_type}/>
+            </video>
+            <section className="card order-3 col-span-2 row-span-2">
+                <h2 className="title">Overview</h2>
+                <p className="paragraph">{projectData.acf.showcase.project_overview}</p>
+            </section>
+        </main>
     )
 
 }

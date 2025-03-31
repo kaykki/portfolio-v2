@@ -24,18 +24,19 @@ export default async function ProjectsList() {
             <h2 className="font-gabarito text-2xl mt-8">Projects</h2>
             <ul className="flex flex-col gap-4 items-center justify-center">
                 {projects.map((project: any) => (
-                    <li key={project.id} className="w-[326px] h-[85px] relative p-4">
+                    <li key={project.id} className="w-[326px] h-[120px] relative p-4">
                         <Link href={`/projects/${project.id}`}>
                             <div className="absolute inset-0 bg-black rounded-md"></div>
-                            <Image src={project._embedded['wp:featuredmedia'][0].source_url} alt={project.title.rendered} fill loading="lazy" className="object-cover rounded-md opacity-29" />
-                            <div className="absolute flex flex-col gap-2 z-20">
-                                <svg
-                                    className="absolute top-0 right-0"
-                                    width="16"
-                                    viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path className="fill-primary" d="m12.002 2.005c5.518 0 9.998 4.48 9.998 9.997 0 5.518-4.48 9.998-9.998 9.998-5.517 0-9.997-4.48-9.997-9.998 0-5.517 4.48-9.997 9.997-9.997zm0 8c-.414 0-.75.336-.75.75v5.5c0 .414.336.75.75.75s.75-.336.75-.75v-5.5c0-.414-.336-.75-.75-.75zm-.002-3c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1z"/>
-                                </svg>
+                            <Image src={project._embedded['wp:featuredmedia'][0].source_url} alt={project.title.rendered} fill loading="lazy" className="object-cover rounded-md opacity-55" />
+                            <svg
+                                className="absolute top-2 right-2"
+                                width="16"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path className="fill-primary" d="m12.002 2.005c5.518 0 9.998 4.48 9.998 9.997 0 5.518-4.48 9.998-9.998 9.998-5.517 0-9.997-4.48-9.997-9.998 0-5.517 4.48-9.997 9.997-9.997zm0 8c-.414 0-.75.336-.75.75v5.5c0 .414.336.75.75.75s.75-.336.75-.75v-5.5c0-.414-.336-.75-.75-.75zm-.002-3c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1z" />
+                            </svg>
+                            <div className="absolute bottom-4 flex flex-col gap-2 z-20">
+
                                 <h2 className="font-gabarito text-secondary">{project.title.rendered}</h2>
 
                                 {/* Tech Stack */}

@@ -27,8 +27,14 @@ body {
 }
 
 @layer components {
+	.mobile-layout {
+		@apply my-4 mx-auto w-[358px] grid grid-cols-[123px_219px] grid-rows-[67px_auto_57px_auto_auto] gap-4
+	}
 	.title {
-		@apply text-xl
+		@apply text-xl font-gabarito
+	}
+	.paragraph {
+		@apply text-[13px] font-fredoka
 	}
 	.card-coloured {
 		@apply bg-primary text-secondary shadow-md rounded-lg p-4
