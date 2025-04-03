@@ -8,17 +8,19 @@ export default function Home() {
 	return (
 		<main className='mobile-layout'>
 			{Header("Kaki Kagatan")}
-			<Image
-				src='/portrait.jpg'
-				alt='Portrait of Kaki Kagatan'
-				width={123}
-				height={130}
-				className='rounded-lg shadow-md order-2'
-			/>
-			<section className='order-3 card row-span-2 font-fredoka flex flex-col gap-2'>
+			<div className='relative rounded-lg shadow-md order-2 mobile-l:row-span-2'>
+				<Image
+					src='/portrait.jpg'
+					alt='Portrait of Kaki Kagatan'
+					fill
+					className='object-cover rounded-lg'
+				/>
+			</div>
+
+			<section className='order-3 card row-span-2 font-fredoka flex flex-col justify-around mobile-l:gap-4'>
 				<div>
-					<h2 className='title'>Font-End Developer</h2>
-					<p className="paragraph">Based in Vancouver B.C.</p>
+					<h2 className='title'>Font-End <br className='mobile-l:hidden'/> Developer</h2>
+					<p className="text-[11px] mobile-m:text-[13px] mobile-l:text-[15px]">Based in Vancouver B.C.</p>
 				</div>
 				<p className="paragraph">Front-End Developer with a strong foundation in UI/UX design principles. Passionate about creating optimized, functional, and user-friendly web experiences.</p>
 			</section>

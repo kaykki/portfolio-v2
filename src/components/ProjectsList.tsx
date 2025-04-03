@@ -21,10 +21,10 @@ export default async function ProjectsList() {
                     </g>
                 </svg>
             </div>
-            <h2 className="font-gabarito text-2xl mt-8">Projects</h2>
+            <h2 className="title mt-8">Projects</h2>
             <ul className="flex flex-col gap-4 items-center justify-center">
                 {projects.map((project: any) => (
-                    <li key={project.id} className="w-[326px] h-[120px] relative p-4">
+                    <li key={project.id} className="w-full h-[120px] relative p-4">
                         <Link href={`/projects/${project.id}`}>
                             <div className="absolute inset-0 bg-black rounded-md"></div>
                             <Image src={project._embedded['wp:featuredmedia'][0].source_url} alt={project.title.rendered} fill loading="lazy" className="object-cover rounded-md opacity-55" />
@@ -37,11 +37,11 @@ export default async function ProjectsList() {
                             </svg>
                             <div className="absolute bottom-4 flex flex-col gap-2 z-20">
 
-                                <h2 className="font-gabarito text-secondary">{project.title.rendered}</h2>
+                                <h2 className="sub-title text-secondary">{project.title.rendered}</h2>
 
                                 {/* Tech Stack */}
-                                <ul className="flex gap-2 items-center justify-center">
-                                    {project.acf.development.tools.map((tools: any) => (
+                                <ul className="flex flex-wrap gap-2 items-center justify-center">
+                                    {project.acf.development.tools.slice(0,3).map((tools: any) => (
                                         <li key={tools.term_id} className="stack">{tools.name}</li>
                                     ))}
                                 </ul>

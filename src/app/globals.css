@@ -24,37 +24,55 @@ body {
 	--color-primary: #004D57;
 	--color-secondary: #F0F0F0;
 	--color-accent: #1E8572;
+	--breakpoint-mobile-m: 25rem;
+	--breakpoint-mobile-l: 30rem;
+	--breakpoint-tablet-m: 38rem;
+	--breakpoint-tablet-l: 45rem;
 }
 
 @layer components {
 	.mobile-layout {
-		@apply my-4 mx-auto w-[358px] grid grid-cols-[123px_219px] grid-rows-[67px_auto_57px_auto_auto] gap-4
+		@apply 
+		mt-4 mb-8 
+		grid 
+		grid-cols-[42%_auto] mobile-m:grid-cols-[38%_auto] mobile-l:grid-cols-[auto_37%]
+		grid-rows-[5%_14%_4%_auto_auto_56px] mobile-m:grid-rows-[6%_15%_5%_auto_auto_3.5rem] mobile-l:grid-rows-[7%_auto_5%_auto_auto_3.5rem]
+		gap-4
 	}
 	.title {
-		@apply text-xl font-gabarito
+		@apply 
+		text-[1rem] mobile-m:text-2xl mobile-l:text-3xl
+		font-gabarito 
+	}
+	.sub-title {
+		@apply text-[1rem] font-gabarito
 	}
 	.paragraph {
-		@apply text-[13px] font-fredoka
+		@apply 
+		text-[12px] mobile-m:text-[14px] mobile-l:text-[16px]
+		font-fredoka
 	}
 	.card-coloured {
-		@apply bg-primary text-secondary shadow-md rounded-lg p-4
+		@apply bg-primary text-secondary shadow-md rounded-lg p-[4%] mobile-l:p-[5%]
 	}
-
 	.card {
-		@apply bg-secondary text-primary shadow-md rounded-lg p-4
+		@apply bg-secondary text-primary shadow-md rounded-lg p-[8%]
 	}
 
 	.stack {
 		@apply px-2 py-1 bg-primary rounded-[4px] text-[12px] flex justify-center align-middle text-secondary
 	}
 	.link-icons {
-		@apply fill-secondary hover:fill-accent focus:fill-accent
+		@apply 
+		w-7.5 mobile-m:w-8.5 mobile-l:w-9.5
+		fill-secondary 
+		hover:fill-accent focus:fill-accent
 	}
 	.facet {
 		@apply fill-primary hover:fill-accent hover:cursor-pointer focus:fill-accent
 	}
 	.tech-stack-facet {
-		@apply bg-primary text-secondary py-2 px-4 rounded-b-lg cursor-pointer
+		@apply text-[14px] bg-primary text-secondary py-2 px-4 rounded-b-lg cursor-pointer 
 	}
 }
 

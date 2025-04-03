@@ -22,7 +22,10 @@ export default function RootLayout({
     
     return (
         <html lang="en">
-            <body className={`${fonts.fredoka.variable} ${fonts.gabarito.variable}`}>
+            <body className=
+                {`${fonts.fredoka.variable} 
+                ${fonts.gabarito.variable} 
+                w-[92%] my-0 mx-auto`}>
                 {children}
                 <Footer />
             </body>
