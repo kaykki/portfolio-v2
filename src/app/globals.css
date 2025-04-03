@@ -24,10 +24,10 @@ body {
 	--color-primary: #004D57;
 	--color-secondary: #F0F0F0;
 	--color-accent: #1E8572;
-	--breakpoint-mobile-m: 25rem;
-	--breakpoint-mobile-l: 30rem;
-	--breakpoint-tablet-m: 38rem;
-	--breakpoint-tablet-l: 45rem;
+	--breakpoint-mobile-m: 25rem; /*400px*/
+	--breakpoint-mobile-l: 30rem; /*480px*/
+	--breakpoint-tablet-m: 38rem; /*680px*/
+	--breakpoint-tablet-l: 45rem; /*720px*/
 }
 
 @layer components {
@@ -60,7 +60,11 @@ body {
 	}
 
 	.stack {
-		@apply px-2 py-1 bg-primary rounded-[4px] text-[12px] flex justify-center align-middle text-secondary
+		@apply 
+		px-2 py-1 
+		bg-primary rounded-[4px] 
+		text-[12px] mobile-m:text-[13px] mobile-l:text-[14px]
+		flex justify-center align-middle text-secondary
 	}
 	.link-icons {
 		@apply 
@@ -72,7 +76,8 @@ body {
 		@apply fill-primary hover:fill-accent hover:cursor-pointer focus:fill-accent
 	}
 	.tech-stack-facet {
-		@apply text-[14px] bg-primary text-secondary py-2 px-4 rounded-b-lg cursor-pointer 
+		@apply text-[14px] mobile-m:text-[15px] mobile-l:text-[16px]
+		bg-primary text-secondary py-2 px-4 rounded-b-lg cursor-pointer 
 	}
 }
 
