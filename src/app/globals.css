@@ -80,24 +80,3 @@ body {
 		bg-primary text-secondary py-2 px-4 rounded-b-lg cursor-pointer 
 	}
 }
-
-/* @media (prefers-color-scheme: dark) {
-	:root {
-		--background: #004D57;
-		--foreground: #ededed;
-	}
-
-	@layer components {
-		.card-coloured {
-			@apply bg-[#E1DEDB] text-primary shadow-md rounded-lg p-2
-		}
-
-		.card {
-			@apply bg-secondary text-primary shadow-md rounded-lg p-4
-		}
-
-		.stack {
-			@apply px-2 py-[3px] bg-primary rounded-[4px] text-[10px] flex justify-center align-middle
-		}
-	}
-} */

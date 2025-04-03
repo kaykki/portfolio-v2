@@ -23,22 +23,24 @@ export default function ProjectsList() {
             flex gap-4 flex-col col-span-2 relative">
 
             <div className="bg-secondary px-4 py-2 flex gap-4 w-fit absolute top-0 right-4 rounded-b-xl">
-                <div onClick={() => setListLayout("grid")}>
-                    <svg width="16" 
-                         height="16" 
-                         viewBox="0 0 16 16" 
+                <div onClick={() => setListLayout("grid")} 
+                     className="cursor-pointer 
+                                w-4 mobile-m:w-4.5 
+                                h-4 mobile-m:h-4.5">
+                    <svg viewBox="0 0 16 16" 
                          fill="none" 
                          xmlns="http://www.w3.org/2000/svg"
-                         className={`${listLayout == "grid" ? "fill-accent" : "fill-primary"}`}>
+                         className={`facet ${listLayout == "grid" ? "fill-accent" : "fill-primary"}`}>
                         <g>
                             <path d="M7.33333 6.33333H0V-1H7.33333V6.33333ZM16 6.33333H8.66667V-1H16V6.33333ZM7.33333 15H0V7.66667H7.33333V15ZM16 15H8.66667V7.66667H16V15Z"/>
                         </g>
                     </svg>
                 </div>
-                <div onClick={() => setListLayout("rows")}>
-                    <svg width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
+                <div onClick={() => setListLayout("rows")} 
+                     className="cursor-pointer 
+                                w-4 mobile-m:w-4.5
+                                h-4 mobile-m:h-4.5">
+                    <svg viewBox="0 0 16 16"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                         className={`${listLayout == "rows" ? "fill-accent" : "fill-primary"}`}>
@@ -53,7 +55,10 @@ export default function ProjectsList() {
             <ul className={`grid ${listLayout == "rows" ? "grid-cols-1" : "grid-cols-2"}  gap-4 items-center justify-center`}>
                 {projects.map((project: any) => (
                     <li key={project.id}
-                        className={`relative p-4 w-full ${listLayout == "rows" ? "h-[130px]" : "h-[200px]"}`}
+                        className={`relative p-2 w-full 
+                            ${listLayout == "rows" 
+                            ? "h-[130px]" 
+                            : "h-[200px]"}`}
                     >
                         <Link href={`/projects/${project.id}`}>
                             <div className="absolute inset-0 bg-black rounded-md"></div>
@@ -76,7 +81,7 @@ export default function ProjectsList() {
                                 <h2 className="sub-title text-secondary">{project.title.rendered}</h2>
 
                                 {/* Tech Stack */}
-                                <ul className="flex flex-wrap gap-2 items-center justify-center">
+                                <ul className="flex flex-wrap gap-2 items-center justify-baseline">
                                     {project.acf.development.tools.slice(0, 3).map((tools: any) => (
                                         <li key={tools.term_id} className="stack">{tools.name}</li>
                                     ))}
