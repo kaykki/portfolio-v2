@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Header from '@/components/Header';
 import Footer from "@/components/Footer";
 import "./globals.css";
 import React from "react";
@@ -25,7 +26,8 @@ export default function RootLayout({
             <body className=
                 {`${fonts.fredoka.variable} 
                 ${fonts.gabarito.variable} 
-                w-[92%] my-0 mx-auto`}>
+                root-layout`}>
+                {Header("Kaki Kagatan")}
                 {children}
                 <Footer />
             </body>

@@ -15,7 +15,7 @@ export default function TechStack() {
     }, [category]);
 
     return (
-        <section className='card order-6 col-span-2 relative'>
+        <section className='card order-5 col-span-2 relative h-fit'>
             <ul className='font-gabarito flex gap-2 absolute top-0 right-4'>
                 <li className={`${category == "" ? "bg-accent" : ""} tech-stack-facet`} 
                     onClick={() => setCategory("")}>

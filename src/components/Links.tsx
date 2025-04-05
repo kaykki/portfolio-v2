@@ -2,7 +2,8 @@ export default function Links() {
     return (
         <section className='
             order-4
-            card-coloured'
+            card-coloured
+            p-2'
         >
             <ul className='flex items-center justify-around h-full'>
                 <li>

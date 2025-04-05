@@ -31,17 +31,23 @@ body {
 }
 
 @layer components {
-	.mobile-layout {
+	.root-layout {
 		@apply 
-		mt-4 mb-8 
+		h-full mt-4 mx-auto 
+		flex flex-wrap
+	}
+	.main-layout {
+		@apply 
+		row-span-2 col-span-2
+		p-[5%]
 		grid 
-		grid-cols-[42%_auto] mobile-m:grid-cols-[38%_auto] mobile-l:grid-cols-[auto_37%]
-		grid-rows-[5%_14%_4%_auto_auto_56px] mobile-m:grid-rows-[6%_15%_5%_auto_auto_3.5rem] mobile-l:grid-rows-[7%_auto_5%_auto_auto_3.5rem]
+		grid-cols-[auto_40%] mobile-l:grid-cols-[auto_45%]
+		grid-rows-[auto_4%_auto_auto] mobile-m:grid-rows-[15%_5%_auto_auto] mobile-l:grid-rows-[15%_4%_auto_auto]
 		gap-4
 	}
 	.title {
 		@apply 
-		text-[1rem] mobile-m:text-2xl mobile-l:text-3xl
+		text-[20px] mobile-m:text-2xl mobile-l:text-3xl
 		font-gabarito 
 	}
 	.sub-title {
@@ -53,7 +59,7 @@ body {
 		font-fredoka
 	}
 	.card-coloured {
-		@apply bg-primary text-secondary shadow-md rounded-lg p-[4%] mobile-l:p-[5%]
+		@apply bg-primary text-secondary rounded-lg p-4 mobile-l:p-[5%]
 	}
 	.card {
 		@apply bg-secondary text-primary shadow-md rounded-lg p-[8%]
