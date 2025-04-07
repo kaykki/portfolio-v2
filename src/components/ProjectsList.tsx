@@ -13,8 +13,7 @@ export default function ProjectsList() {
 
     useEffect(() => {
         fetchProjects().then(data => setProjects(data));
-    }, [])
-
+    }, []);
 
     return (
         <section className="
@@ -22,6 +21,7 @@ export default function ProjectsList() {
             order-4
             flex gap-4 flex-col col-span-2 relative">
 
+            {/* Layout Facets */}
             <div className="bg-secondary px-4 py-2 flex gap-4 w-fit absolute top-0 right-4 rounded-b-xl">
                 <div onClick={() => setListLayout("grid")} 
                      className="cursor-pointer 
@@ -49,17 +49,21 @@ export default function ProjectsList() {
                         </g>
                     </svg>
                 </div >
-
             </div>
+
+            {/* Project Cards */}
             <h2 className="title mt-8">Projects</h2>
-            <ul className={`grid ${listLayout == "rows" ? "grid-cols-1" : "grid-cols-2"}  gap-4 mobile-l:gap-6 items-center justify-center`}>
+            <ul className={
+                `grid ${listLayout == "rows" 
+                ? "grid-cols-1" 
+                : "grid-cols-2"}  
+                gap-4 mobile-l:gap-6 items-center justify-center`}>
                 {projects.map((project: any) => (
                     <li key={project.id}
                         className={`relative p-2 w-full 
                             ${listLayout == "rows" 
                             ? "h-[130px] mobile-l:h-[15rem]" 
-                            : "h-[200px]"}`}
-                    >
+                            : "h-[200px]"}`}>
                         <Link href={`/projects/${project.id}`}>
                             <div className="absolute inset-0 bg-black rounded-md"></div>
                             <Image
@@ -67,8 +71,7 @@ export default function ProjectsList() {
                                 alt={project.title.rendered}
                                 fill
                                 loading="lazy"
-                                className="object-cover rounded-md opacity-35"
-                            />
+                                className="object-cover rounded-md opacity-35"/>
                             <svg
                                 className="absolute top-4 right-4"
                                 width="16"

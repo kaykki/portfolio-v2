@@ -33,16 +33,15 @@ body {
 @layer components {
 	.root-layout {
 		@apply 
-		h-full mt-4 mx-auto 
-		flex flex-wrap
+		w-[90%] mx-auto mt-[5%]
+		flex flex-wrap justify-center
+		gap-4
 	}
 	.main-layout {
 		@apply 
-		row-span-2 col-span-2
-		p-[5%]
 		grid 
 		grid-cols-[auto_40%] mobile-l:grid-cols-[auto_45%]
-		grid-rows-[auto_4%_auto_auto] mobile-m:grid-rows-[15%_5%_auto_auto] mobile-l:grid-rows-[15%_4%_auto_auto]
+		grid-rows-[auto_4%_auto_auto] mobile-m:grid-rows-[auto_5%_auto_auto] mobile-l:grid-rows-[auto_4%_auto_auto]
 		gap-4
 	}
 	.title {
@@ -59,10 +58,13 @@ body {
 		font-fredoka
 	}
 	.card-coloured {
-		@apply bg-primary text-secondary rounded-lg p-4 mobile-l:p-[5%]
+		@apply bg-primary text-secondary rounded-lg p-4
 	}
 	.card {
-		@apply bg-secondary text-primary shadow-md rounded-lg p-[8%]
+		@apply 
+		p-[5%]
+		bg-secondary text-primary 
+		shadow-md rounded-lg
 	}
 
 	.stack {
@@ -74,7 +76,7 @@ body {
 	}
 	.link-icons {
 		@apply 
-		w-7.5 mobile-m:w-8.5 mobile-l:w-9.5
+		w-7 mobile-m:w-8.5 mobile-l:w-9.5
 		fill-secondary 
 		hover:fill-accent focus:fill-accent
 	}
@@ -84,5 +86,9 @@ body {
 	.tech-stack-facet {
 		@apply text-[14px] mobile-m:text-[15px] mobile-l:text-[16px]
 		bg-primary text-secondary py-2 px-4 rounded-b-lg cursor-pointer 
+	}
+
+	.footer {
+		@apply order-3 font-gabarito w-fit py-2 px-4 bg-primary text-secondary rounded-t-2xl
 	}
 }
