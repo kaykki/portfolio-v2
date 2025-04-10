@@ -33,16 +33,20 @@ body {
 @layer components {
 	.root-layout {
 		@apply 
-		w-[90%] mx-auto mt-[5%]
-		flex flex-wrap justify-center
-		gap-4
+		w-[90%] mobile-l:max-w-[30rem]
+		mx-auto mt-[5%]
+		grid 
+		mobile-m:grid-cols-[1fr_37%] mobile-l:grid-cols-[auto_40%]
+		mobile-m:grid-rows-[75px_auto]
+		gap-4 mobile-l:gap-6
 	}
 	.main-layout {
-		@apply 
+		@apply
+		mobile-m:col-span-2 mobile-m:mt-[-91px] mobile-l:mt-[-99px]
 		grid 
-		grid-cols-[auto_40%] mobile-l:grid-cols-[auto_45%]
-		grid-rows-[auto_4%_auto_auto] mobile-m:grid-rows-[auto_5%_auto_auto] mobile-l:grid-rows-[auto_4%_auto_auto]
-		gap-4
+		grid-cols-[42%_auto] mobile-m:grid-cols-[auto_37%] mobile-l:grid-cols-[auto_40%]
+		grid-rows-[auto_4%_auto_auto] mobile-m:grid-rows-[75px_auto_5%_auto_auto] mobile-l:grid-rows-[75px_auto_4%_auto_auto]
+		gap-4 mobile-l:gap-6
 	}
 	.title {
 		@apply 
@@ -58,7 +62,7 @@ body {
 		font-fredoka
 	}
 	.card-coloured {
-		@apply bg-primary text-secondary rounded-lg p-4
+		@apply bg-primary text-secondary rounded-lg p-[5%] shadow-md
 	}
 	.card {
 		@apply 
@@ -89,6 +93,6 @@ body {
 	}
 
 	.footer {
-		@apply order-3 font-gabarito w-fit py-2 px-4 bg-primary text-secondary rounded-t-2xl
+		@apply order-3 mobile-m:col-span-2 font-gabarito my-0 mx-auto w-fit py-2 px-4 bg-primary text-secondary rounded-t-2xl
 	}
 }

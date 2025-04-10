@@ -4,10 +4,9 @@ export default function Header(title: string) {
 
     return (
         <header className='
-            card-coloured w-full'>
-            <div className='w-full flex items-center gap-4'>
+            card-coloured w-full flex items-center'>
                 <Link href={"/"}>
-                    <svg viewBox="0 0 512 512" className='link-icons'>
+                    <svg viewBox="0 0 512 512" className='link-icons w-10'>
                         <g>
                             <path d="M46.82,20.5l-0.29,228.23c0,0,13.49,112.1,129.47,110.38l0.29-231.96C176.29,127.15,154.76,16.62,46.82,20.5z"
                             />
@@ -20,8 +19,7 @@ export default function Header(title: string) {
                         </g>
                     </svg>
                 </Link>
-                <h1 className='font-gabarito text-center text-2xl mobile-s:text-3xl mobile-l:text-3xl w-full'>{title}</h1>
-            </div>
+                <h1 className='font-gabarito text-center text-2xl mobile-m:text-xl w-full'>{title}</h1>
         </header>
     );
 }
