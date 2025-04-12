@@ -19,7 +19,7 @@ export default function Header(title: string) {
                         </g>
                     </svg>
                 </Link>
-                <h1 className='font-gabarito text-center text-2xl mobile-m:text-xl w-full'>{title}</h1>
+                <h1 className='font-gabarito text-center text-2xl mobile-s:text-xl w-full'>{title}</h1>
         </header>
     );
 }

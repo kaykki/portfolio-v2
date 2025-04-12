@@ -1,10 +1,6 @@
 export default function Links() {
     return (
-        <section className='
-            order-4
-            card-coloured
-            p-[5%]'
-        >
+        <section className='card-coloured social-links'>
             <ul className='flex items-center justify-around h-full'>
                 <li>
                     <a href="https://github.com/kaykki" target="_blank" rel="noopener noreferrer">

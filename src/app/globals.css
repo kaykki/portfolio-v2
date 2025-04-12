@@ -24,45 +24,118 @@ body {
 	--color-primary: #004D57;
 	--color-secondary: #F0F0F0;
 	--color-accent: #1E8572;
-	--breakpoint-mobile-m: 25rem; /*400px*/
+	--breakpoint-mobile-s: 25rem; /*400px*/
 	--breakpoint-mobile-l: 30rem; /*480px*/
 	--breakpoint-tablet-m: 38rem; /*680px*/
-	--breakpoint-tablet-l: 45rem; /*720px*/
+	--breakpoint-tablet-s: 45rem; /*720px*/
+	--breakpoint-tablet-m: 50rem; /*800px*/
+	--breakpoint-tablet-l: 60rem; /*800px*/
+	--breakpoint-desktop-s: 64rem; /*1024px*/
 }
 
 @layer components {
 	.root-layout {
 		@apply 
-		w-[90%] mobile-l:max-w-[30rem]
+		w-[90%] mobile-l:max-w-[30rem] tablet-s:max-w-[90%] desktop-s:max-w-[50rem]
 		mx-auto mt-[5%]
-		grid 
-		mobile-m:grid-cols-[1fr_37%] mobile-l:grid-cols-[auto_40%]
-		mobile-m:grid-rows-[75px_auto]
+		grid
+		
+		/*column layout*/
+		mobile-s:grid-cols-[1fr_37%] 
+		mobile-l:grid-cols-[1fr_40%]
+		tablet-s:grid-cols-[30%_30%_auto]
+
+		/*row layout*/
+		mobile-s:grid-rows-[75px_auto]
 		gap-4 mobile-l:gap-6
 	}
+
 	.main-layout {
 		@apply
-		mobile-m:col-span-2 mobile-m:mt-[-91px] mobile-l:mt-[-99px]
+		h-full
+		mobile-s:col-span-2
+		tablet-s:col-span-3 
+		
+		mobile-s:mt-[-91px] 
+		mobile-l:mt-[-99px]
+	
+
 		grid 
-		grid-cols-[42%_auto] mobile-m:grid-cols-[auto_37%] mobile-l:grid-cols-[auto_40%]
-		grid-rows-[auto_4%_auto_auto] mobile-m:grid-rows-[75px_auto_5%_auto_auto] mobile-l:grid-rows-[75px_auto_4%_auto_auto]
+
+		/*column layout*/
+		grid-cols-[42%_auto] 
+		mobile-s:grid-cols-[auto_37%] 
+		mobile-l:grid-cols-[auto_40%]
+		tablet-s:grid-cols-[30%_25%_auto]
+
+		/*row layout*/
+		grid-rows-[1fr_4%_auto] 
+		mobile-s:grid-rows-[75px_auto_5%_auto] 
+		mobile-l:grid-rows-[75px_auto_4%_auto_auto]
+		tablet-s:grid-rows-[75px_auto_7%_auto]
+
+		
 		gap-4 mobile-l:gap-6
 	}
+
+	.portrait {
+		@apply
+		relative rounded-lg 
+		order-1
+		mobile-s:col-start-2 mobile-s:row-span-2
+	}
+
+	.social-links {
+		@apply
+		order-4
+		p-[5%]
+	}
+
+	.description {
+		@apply
+		order-1 tablet-s:order-3
+		row-span-2 font-fredoka flex flex-col gap-2 justify-around
+	}
+
+	.project-list {
+		@apply
+		order-4
+        flex gap-4 flex-col 
+		col-span-2 tablet-s:col-span-3
+		relative
+	}
+
+	.tech-stack {
+		@apply
+		order-5 
+		tablet-s:order-2
+
+		col-span-2 
+		tablet-s:col-span-1
+
+		tablet-s:row-span-3
+
+		relative h-full
+	}
+
 	.title {
 		@apply 
-		text-[20px] mobile-m:text-2xl mobile-l:text-3xl
+		text-[20px] mobile-s:text-2xl mobile-l:text-3xl
+		tablet-s:text-2xl
 		font-gabarito 
 	}
+
 	.sub-title {
 		@apply text-[1rem] font-gabarito
 	}
 	.paragraph {
 		@apply 
-		text-[12px] mobile-m:text-[14px] mobile-l:text-[16px]
+		text-[12px] mobile-s:text-[14px] mobile-l:text-[16px]
 		font-fredoka
 	}
 	.card-coloured {
 		@apply bg-primary text-secondary rounded-lg p-[5%] shadow-md
+		tablet-s:p-[4%]
 	}
 	.card {
 		@apply 
@@ -75,24 +148,28 @@ body {
 		@apply 
 		px-2 py-1 
 		bg-primary rounded-[4px] 
-		text-[12px] mobile-m:text-[13px] mobile-l:text-[14px]
+		text-[12px] mobile-s:text-[13px] mobile-l:text-[14px]
+		tablet-s:text-[12px]
 		flex justify-center align-middle text-secondary
 	}
 	.link-icons {
 		@apply 
-		w-7 mobile-m:w-8.5 mobile-l:w-9.5
+		w-7 mobile-s:w-8.5 mobile-l:w-9.5
 		fill-secondary 
 		hover:fill-accent focus:fill-accent
 	}
 	.facet {
 		@apply fill-primary hover:fill-accent hover:cursor-pointer focus:fill-accent
 	}
+
 	.tech-stack-facet {
-		@apply text-[14px] mobile-m:text-[15px] mobile-l:text-[16px]
+		@apply 
+		text-[14px] mobile-s:text-[15px] mobile-l:text-[16px]
+		tablet-s:text-[12px]
 		bg-primary text-secondary py-2 px-4 rounded-b-lg cursor-pointer 
 	}
 
 	.footer {
-		@apply order-3 mobile-m:col-span-2 font-gabarito my-0 mx-auto w-fit py-2 px-4 bg-primary text-secondary rounded-t-2xl
+		@apply order-3 mobile-s:col-span-2 tablet-s:col-span-3 font-gabarito my-0 mx-auto w-fit py-2 px-4 bg-primary text-secondary rounded-t-2xl
 	}
 }

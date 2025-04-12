@@ -16,17 +16,14 @@ export default function ProjectsList() {
     }, []);
 
     return (
-        <section className="
-            card-coloured
-            order-4
-            flex gap-4 flex-col col-span-2 relative">
+        <section className="card-coloured project-list">
 
             {/* Layout Facets */}
             <div className="bg-secondary px-4 py-2 flex gap-4 w-fit absolute top-0 right-4 rounded-b-xl">
                 <div onClick={() => setListLayout("grid")} 
                      className="cursor-pointer 
-                                w-4 mobile-m:w-4.5 
-                                h-4 mobile-m:h-4.5">
+                                w-4 mobile-s:w-4.5 
+                                h-4 mobile-s:h-4.5">
                     <svg viewBox="0 0 16 16" 
                          fill="none" 
                          xmlns="http://www.w3.org/2000/svg"
@@ -38,8 +35,8 @@ export default function ProjectsList() {
                 </div>
                 <div onClick={() => setListLayout("rows")} 
                      className="cursor-pointer 
-                                w-4 mobile-m:w-4.5
-                                h-4 mobile-m:h-4.5">
+                                w-4 mobile-s:w-4.5
+                                h-4 mobile-s:h-4.5">
                     <svg viewBox="0 0 16 16"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
