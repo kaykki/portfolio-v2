@@ -69,12 +69,11 @@ body {
 		tablet-s:grid-cols-[30%_25%_auto]
 
 		/*row layout*/
-		grid-rows-[1fr_4%_auto] 
-		mobile-s:grid-rows-[75px_auto_5%_auto] 
-		mobile-l:grid-rows-[75px_auto_4%_auto_auto]
-		tablet-s:grid-rows-[75px_auto_7%_auto]
+		grid-rows-[1fr_55px_auto] 
+		mobile-s:grid-rows-[75px_auto_65px_auto] 
+		mobile-l:grid-rows-[75px_auto_75_auto_auto]
+		tablet-s:grid-rows-[75px_auto_80px_auto]
 
-		
 		gap-4 mobile-l:gap-6
 	}
 
@@ -88,7 +87,6 @@ body {
 	.social-links {
 		@apply
 		order-4
-		p-[5%]
 	}
 
 	.description {

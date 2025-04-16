@@ -59,7 +59,7 @@ export default function ProjectsList() {
                     <li key={project.id}
                         className={`relative p-2 w-full 
                             ${listLayout == "rows" 
-                            ? "h-[130px] mobile-l:h-[15rem]" 
+                            ? "h-[130px] mobile-l:h-[15rem] desktop-s:h-[10rem]" 
                             : "h-[200px]"}`}>
                         <Link href={`/projects/${project.id}`}>
                             <div className="absolute inset-0 bg-black rounded-md"></div>
