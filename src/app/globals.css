@@ -36,45 +36,42 @@ body {
 @layer components {
 	.root-layout {
 		@apply 
-		w-[90%] mobile-l:max-w-[30rem] tablet-s:max-w-[90%] desktop-s:max-w-[50rem]
-		mx-auto mt-[5%]
-		grid
+		w-[90%] mobile-l:max-w-[30rem] tablet-m:max-w-[90%] tablet-l:max-w-[65rem]
+		h-screen
+		mx-auto mt-[5%] tablet-m:mt-0 pt-[5%]
+		grid gap-4 mobile-l:gap-6
 		
 		/*column layout*/
 		mobile-s:grid-cols-[1fr_37%] 
 		mobile-l:grid-cols-[1fr_40%]
-		tablet-s:grid-cols-[30%_30%_auto]
+		tablet-m:grid-cols-[30%_30%_auto]
 
 		/*row layout*/
 		mobile-s:grid-rows-[75px_auto]
-		gap-4 mobile-l:gap-6
 	}
 
 	.main-layout {
 		@apply
-		h-full
+		tablet-m:overflow-hidden
 		mobile-s:col-span-2
-		tablet-s:col-span-3 
+		tablet-m:col-span-3 
 		
 		mobile-s:mt-[-91px] 
 		mobile-l:mt-[-99px]
-	
 
-		grid 
+		grid gap-4 mobile-l:gap-6
 
 		/*column layout*/
 		grid-cols-[42%_auto] 
 		mobile-s:grid-cols-[auto_37%] 
 		mobile-l:grid-cols-[auto_40%]
-		tablet-s:grid-cols-[30%_25%_auto]
+		tablet-m:grid-cols-[30%_25%_auto]
 
 		/*row layout*/
 		grid-rows-[1fr_55px_auto] 
 		mobile-s:grid-rows-[75px_auto_65px_auto] 
 		mobile-l:grid-rows-[75px_auto_75_auto_auto]
-		tablet-s:grid-rows-[75px_auto_80px_auto]
-
-		gap-4 mobile-l:gap-6
+		tablet-m:grid-rows-[75px_auto_80px_auto]
 	}
 
 	.portrait {
@@ -91,27 +88,28 @@ body {
 
 	.description {
 		@apply
-		order-1 tablet-s:order-3
+		order-1 tablet-m:order-3
 		row-span-2 font-fredoka flex flex-col gap-2 justify-around
 	}
 
 	.project-list {
 		@apply
 		order-4
-        flex gap-4 flex-col 
-		col-span-2 tablet-s:col-span-3
+		col-span-2 tablet-m:col-span-3
+		flex gap-4 flex-col 
 		relative
+		tablet-m:overflow-y-hidden
 	}
 
 	.tech-stack {
 		@apply
 		order-5 
-		tablet-s:order-2
+		tablet-m:order-2
 
 		col-span-2 
-		tablet-s:col-span-1
+		tablet-m:col-span-1
 
-		tablet-s:row-span-3
+		tablet-m:row-span-3
 
 		relative h-full
 	}
@@ -119,7 +117,7 @@ body {
 	.title {
 		@apply 
 		text-[20px] mobile-s:text-2xl mobile-l:text-3xl
-		tablet-s:text-2xl
+		tablet-m:text-2xl
 		font-gabarito 
 	}
 
@@ -133,7 +131,7 @@ body {
 	}
 	.card-coloured {
 		@apply bg-primary text-secondary rounded-lg p-[5%] shadow-md
-		tablet-s:p-[4%]
+		tablet-m:p-[4%]
 	}
 	.card {
 		@apply 
@@ -147,7 +145,7 @@ body {
 		px-2 py-1 
 		bg-primary rounded-[4px] 
 		text-[12px] mobile-s:text-[13px] mobile-l:text-[14px]
-		tablet-s:text-[12px]
+		tablet-m:text-[12px]
 		flex justify-center align-middle text-secondary
 	}
 	.link-icons {
@@ -163,11 +161,11 @@ body {
 	.tech-stack-facet {
 		@apply 
 		text-[14px] mobile-s:text-[15px] mobile-l:text-[16px]
-		tablet-s:text-[12px]
+		tablet-m:text-[12px]
 		bg-primary text-secondary py-2 px-4 rounded-b-lg cursor-pointer 
 	}
 
 	.footer {
-		@apply order-3 mobile-s:col-span-2 tablet-s:col-span-3 font-gabarito my-0 mx-auto w-fit py-2 px-4 bg-primary text-secondary rounded-t-2xl
+		@apply order-3 mobile-s:col-span-2 tablet-m:col-span-3 font-gabarito my-0 mx-auto w-fit py-2 px-4 bg-primary text-secondary rounded-t-2xl
 	}
 }

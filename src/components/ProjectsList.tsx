@@ -49,9 +49,10 @@ export default function ProjectsList() {
             </div>
 
             {/* Project Cards */}
-            <h2 className="title mt-8">Projects</h2>
+            <h2 className="title mt-8 ">Projects</h2>
             <ul className={
-                `grid ${listLayout == "rows" 
+                `overflow-y-scroll
+                 grid ${listLayout == "rows" 
                 ? "grid-cols-1" 
                 : "grid-cols-2"}  
                 gap-4 mobile-l:gap-6 items-center justify-center`}>
