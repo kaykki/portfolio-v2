@@ -60,10 +60,10 @@ export default function ProjectsList() {
                     <li key={project.id}
                         className={`relative p-2 w-full 
                             ${listLayout == "rows" 
-                            ? "h-[130px] mobile-l:h-[15rem] desktop-s:h-[10rem]" 
+                            ? "h-[150px] desktop-s:h-[10rem]" 
                             : "h-[200px]"}`}>
+                        <div className="absolute inset-0 bg-black rounded-md"></div>
                         <Link href={`/projects/${project.id}`}>
-                            <div className="absolute inset-0 bg-black rounded-md"></div>
                             <Image
                                 src={project._embedded['wp:featuredmedia'][0].source_url}
                                 alt={project.title.rendered}
@@ -72,10 +72,10 @@ export default function ProjectsList() {
                                 className="object-cover rounded-md opacity-35"/>
                             <svg
                                 className="absolute top-4 right-4"
-                                width="16"
+                                width="20"
                                 viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <path className="fill-primary" d="m12.002 2.005c5.518 0 9.998 4.48 9.998 9.997 0 5.518-4.48 9.998-9.998 9.998-5.517 0-9.997-4.48-9.997-9.998 0-5.517 4.48-9.997 9.997-9.997zm0 8c-.414 0-.75.336-.75.75v5.5c0 .414.336.75.75.75s.75-.336.75-.75v-5.5c0-.414-.336-.75-.75-.75zm-.002-3c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1z" />
+                                <path className="fill-secondary" d="m12.002 2.005c5.518 0 9.998 4.48 9.998 9.997 0 5.518-4.48 9.998-9.998 9.998-5.517 0-9.997-4.48-9.997-9.998 0-5.517 4.48-9.997 9.997-9.997zm0 8c-.414 0-.75.336-.75.75v5.5c0 .414.336.75.75.75s.75-.336.75-.75v-5.5c0-.414-.336-.75-.75-.75zm-.002-3c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1z" />
                             </svg>
                             <div className="absolute bottom-4 flex flex-col gap-2 z-20">
 
