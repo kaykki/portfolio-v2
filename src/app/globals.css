@@ -37,8 +37,7 @@ body {
 	.root-layout {
 		@apply 
 		w-[90%] mobile-l:max-w-[30rem] tablet-m:max-w-[90%] tablet-l:max-w-[65rem]
-		h-screen
-		mx-auto mt-[5%] tablet-m:mt-0 pt-[5%]
+		mx-auto mt-[5%] tablet-m:mt-0 tablet-m:pt-[5%]
 		grid gap-4 mobile-l:gap-6
 		
 		/*column layout*/
@@ -98,7 +97,6 @@ body {
 		col-span-2 tablet-m:col-span-3
 		flex gap-4 flex-col 
 		relative
-		tablet-m:overflow-y-hidden
 	}
 
 	.tech-stack {
