@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function Header(title: string) {
+export default function Header(title?: string) {
 
     return (
         <header className='
@@ -19,7 +19,7 @@ export default function Header(title: string) {
                         </g>
                     </svg>
                 </Link>
-                <h1 className='font-gabarito text-center text-2xl mobile-s:text-xl w-full'>{title}</h1>
+                <h1 className='font-gabarito text-center text-2xl mobile-s:text-xl w-full'>{title ? title: "Kaki Kagatan"}</h1>
         </header>
     );
 }

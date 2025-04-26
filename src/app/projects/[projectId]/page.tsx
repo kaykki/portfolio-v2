@@ -22,8 +22,8 @@ export default async function Project({
     const projectData = await fetchProjectData((await params).projectId);
 
     return (
-        <main className="mobile-layout">
-            {Header(projectData.title.rendered)}
+        <main className="main-layout">
+            {/* {Header(projectData.title.rendered)} */}
             <video autoPlay className="order-2 col-span-2 rounded-md shadow-md">
                 <source 
                     src={projectData.acf.showcase.project_preview.url} 
@@ -32,6 +32,14 @@ export default async function Project({
             <section className="card order-3 col-span-2 row-span-2">
                 <h2 className="title">Overview</h2>
                 <p className="paragraph">{projectData.acf.showcase.project_overview}</p>
+            </section>
+            <section className="card col-span-2">
+                <h2 className="title">Tech Used</h2>
+                <ul className="font-fredoka flex flex-wrap gap-2">
+                    {projectData.acf.development.tools.map((tool: any) => (
+                        <li key={tool.term_id} className="stack w-fit">{tool.name}</li>
+                    ))}
+                </ul>
             </section>
         </main>
     )
