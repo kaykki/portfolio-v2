@@ -29,7 +29,7 @@ body {
 	--breakpoint-tablet-m: 38rem; /*680px*/
 	--breakpoint-tablet-s: 45rem; /*720px*/
 	--breakpoint-tablet-m: 50rem; /*800px*/
-	--breakpoint-tablet-l: 60rem; /*800px*/
+	--breakpoint-tablet-l: 60rem; /*960px*/
 	--breakpoint-desktop-s: 64rem; /*1024px*/
 }
 
@@ -44,6 +44,7 @@ body {
 		mobile-s:grid-cols-[1fr_37%] 
 		mobile-l:grid-cols-[1fr_40%]
 		tablet-m:grid-cols-[30%_30%_auto]
+		desktop-s:grid-cols-[30%_20%_auto]
 
 		/*row layout*/
 		mobile-s:grid-rows-[75px_auto]
@@ -65,12 +66,14 @@ body {
 		mobile-s:grid-cols-[auto_37%] 
 		mobile-l:grid-cols-[auto_40%]
 		tablet-m:grid-cols-[30%_25%_auto]
+		desktop-s:grid-cols-[30%_20%_auto]
 
 		/*row layout*/
 		grid-rows-[1fr_55px_auto] 
 		mobile-s:grid-rows-[75px_auto_65px_auto] 
 		mobile-l:grid-rows-[75px_auto_75_auto_auto]
 		tablet-m:grid-rows-[75px_auto_80px_auto]
+		desktop-s:grid-rows-[75px_20%_70px_auto]
 	}
 
 	.portrait {
@@ -82,7 +85,7 @@ body {
 
 	.social-links {
 		@apply
-		order-4
+		order-4 tablet-m:order-3
 	}
 
 	.description {
@@ -93,23 +96,22 @@ body {
 
 	.project-list {
 		@apply
-		order-4
-		col-span-2 tablet-m:col-span-3
+		order-4 tablet-m:order-2
+		col-span-2 tablet-m:col-span-1
+		tablet-m:row-span-4
 		flex gap-4 flex-col 
 		relative
 	}
 
 	.tech-stack {
 		@apply
-		order-5 
-		tablet-m:order-2
+		order-5 tablet-m:order-4
 
-		col-span-2 
-		tablet-m:col-span-1
+		col-span-2 tablet-m:col-span-2
 
-		tablet-m:row-span-3
+		
 
-		relative h-full
+		relative
 	}
 
 	.title {
