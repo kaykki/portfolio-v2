@@ -27,7 +27,7 @@ export default function RootLayout({
                 {`${fonts.fredoka.variable} 
                 ${fonts.gabarito.variable} 
                 root-layout`}>
-                {Header("Kaki Kagatan")}
+                <Header />
                 {children}
                 <Footer />
             </body>

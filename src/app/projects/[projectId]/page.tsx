@@ -23,7 +23,7 @@ export default async function Project({
 
     return (
         <main className="main-layout">
-            {/* {Header(projectData.title.rendered)} */}
+            <Header />
             <video autoPlay className="order-2 col-span-2 rounded-md shadow-md">
                 <source 
                     src={projectData.acf.showcase.project_preview.url} 
