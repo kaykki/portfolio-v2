@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { fetchProjectData } from "@/utils/api";
-import Header from "@/components/Header";
 import { Props } from "@/utils/types";
 
 // Dynamic metadata generation
@@ -23,7 +22,6 @@ export default async function Project({
 
     return (
         <main className="main-layout">
-            <Header />
             <video autoPlay className="order-2 col-span-2 rounded-md shadow-md">
                 <source 
                     src={projectData.acf.showcase.project_preview.url} 

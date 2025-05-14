@@ -19,10 +19,16 @@ export type Project = {
     };
     acf: {
         showcase: {
+            project_overview: string
+            project_preview: {
+                url: string;
+                mime_type: string;
+            };
 
         };
         development: {
-
+            tools: Stack[];
+            tools_category: string;
         };
         design: {
 

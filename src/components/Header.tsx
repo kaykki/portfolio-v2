@@ -1,16 +1,29 @@
 "use client"
 
 import Link from 'next/link';
-import { useSearchParams, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
+import { fetchProjectData } from '@/utils/api';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
 
-    const searchParams = useSearchParams();
-    const pathname = usePathname();
+    const pathname      = usePathname();
+    const isProjectPage = pathname.includes("/projects/");
 
-    const query = searchParams.get("Project");
+    const [title, setTitle] = useState("Kaki Kagatan");
 
-    console.log(pathname, query);
+    useEffect(()=>{
+        if (isProjectPage) {
+            const projectId = pathname.split('/projects/')[1];
+            fetchProjectData(projectId).then(res => {
+                setTitle(res.title.rendered);
+            }).catch(err => {
+                console.error("Error fetching project data:", err);
+            });
+        } else {
+            setTitle("Kaki Kagatan");
+        }
+    },[pathname])
 
     return (
         <header className='
@@ -29,7 +42,7 @@ export default function Header() {
                     </g>
                 </svg>
             </Link>
-            <h1 className='font-gabarito text-center text-2xl mobile-s:text-xl w-full'>{query}</h1>
+            <h1 className='font-gabarito text-center text-2xl mobile-s:text-xl w-full'>{title}</h1>
         </header>
     );
 }
