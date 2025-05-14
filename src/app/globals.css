@@ -39,6 +39,8 @@ body {
 		w-[90%] mobile-l:max-w-[30rem] tablet-m:max-w-[90%] tablet-l:max-w-[65rem]
 		mx-auto mt-[5%] tablet-m:mt-0 tablet-m:pt-[5%]
 		grid gap-4 mobile-l:gap-6
+		items-center justify-center
+		
 		
 		/*column layout*/
 		mobile-s:grid-cols-[1fr_37%] 
@@ -47,7 +49,7 @@ body {
 		desktop-s:grid-cols-[30%_20%_auto]
 
 		/*row layout*/
-		mobile-s:grid-rows-[75px_auto]
+		mobile-s:grid-rows-[75px_auto] tablet-m:grid-rows-[auto]
 	}
 
 	.main-layout {
@@ -58,6 +60,7 @@ body {
 		
 		mobile-s:mt-[-91px] 
 		mobile-l:mt-[-99px]
+		tablet-m:mt-0
 
 		grid gap-4 mobile-l:gap-6
 
@@ -166,6 +169,17 @@ body {
 	}
 
 	.footer {
-		@apply order-3 mobile-s:col-span-2 tablet-m:col-span-3 font-gabarito my-0 mx-auto w-fit py-2 px-4 bg-primary text-secondary rounded-t-2xl
+		@apply 
+		order-3 
+
+		tablet-m:absolute tablet-m:bottom-0 tablet-m:left-0 tablet-m:right-0
+
+		mobile-s:col-span-2 
+		tablet-m:col-span-3 
+		
+		font-gabarito 
+		my-0 mx-auto w-fit py-2 px-4 
+		
+		bg-primary text-secondary rounded-t-2xl
 	}
 }

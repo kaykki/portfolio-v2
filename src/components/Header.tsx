@@ -27,7 +27,9 @@ export default function Header() {
 
     return (
         <header className='
-            card-coloured w-full flex items-center'>
+            card-coloured w-full h-full flex items-center 
+            tablet-m:absolute tablet-m:h-fit tablet-m:w-fit tablet-m:top-8 tablet-m:left-0
+            tablet-m:rounded-tl-none tablet-m:rounded-bl-none '>
             <Link href={"/"}>
                 <svg viewBox="0 0 512 512" className='link-icons w-10'>
                     <g>
