@@ -19,7 +19,7 @@ export default function ProjectsList() {
         <section className="card-coloured project-list">
 
             {/* Layout Facets */}
-            <div className="bg-secondary px-4 py-2 flex gap-4 w-fit absolute top-0 right-4 rounded-b-xl">
+            {/* <div className="bg-secondary px-4 py-2 flex gap-4 w-fit absolute top-0 right-4 rounded-b-xl">
                 <div onClick={() => setListLayout("grid")} 
                      className="cursor-pointer 
                                 w-4 mobile-s:w-4.5 
@@ -46,10 +46,10 @@ export default function ProjectsList() {
                         </g>
                     </svg>
                 </div >
-            </div>
+            </div> */}
 
             {/* Project Cards */}
-            <h2 className="title mt-8 ">Projects</h2>
+            <h2 className="title">Featured Projects</h2>
             <ul className={
                 `grid ${listLayout == "rows" 
                 ? "grid-cols-1" 
