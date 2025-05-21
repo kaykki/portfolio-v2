@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Project } from "@/utils/types";
-import { fetchProjects } from "@/utils/api";
+import { fetchProjectData } from "@/utils/api";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,7 +12,7 @@ export default function ProjectsList() {
     const [listLayout, setListLayout] = useState("rows");
 
     useEffect(() => {
-        fetchProjects().then(data => setProjects(data));
+        fetchProjectData().then(data => setProjects(data));
     }, []);
 
     return (
