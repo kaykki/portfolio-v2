@@ -36,7 +36,7 @@ body {
 @layer components {
 	.root-layout {
 		@apply 
-		w-[90%] mobile-l:max-w-[30rem] tablet-m:max-w-[90%] tablet-l:max-w-[65rem]
+		w-[90%] mobile-l:max-w-[30rem] tablet-m:max-w-[90%] tablet-l:max-w-[75rem]
 		mx-auto mt-[5%]
 		grid gap-4 mobile-l:gap-6
 		

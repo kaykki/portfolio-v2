@@ -15,7 +15,7 @@ export async function fetchProjectData(id: string) {
 }
 
 export async function fetchAboutMe() {
-    const response = await fetch(`https://kayki.ca/portfolio/wp-json/wp/v2/pages/98?_=${new Date().getTime()}`);
+    const response = await fetch(`https://kayki.ca/portfolio/wp-json/wp/v2/pages/98`);
     
     if(!response.ok) throw new Error("Failed to fetch about me data");
     

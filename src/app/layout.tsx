@@ -5,7 +5,6 @@ import "./globals.css";
 import React from "react";
 import fonts from "@/utils/fonts";
 
-
 export const metadata: Metadata = {
     title: "Kaki Kagatan",
     description: "Portfolio site of Kaki Kagatan",
