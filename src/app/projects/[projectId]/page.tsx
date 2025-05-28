@@ -18,7 +18,7 @@ export default async function Project({
 } : {
     params: Props;
 }) {
-    const projectData = await fetchProjectData((await params).projectId);
+    const projectData = await fetchProjectData(params.projectId);
 
     return (
         <main className="main-layout">

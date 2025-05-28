@@ -29,6 +29,7 @@ export default function Header() {
         <header className='
             card-coloured w-full h-full flex items-center'>
             <Link href={"/"}>
+                <p className='screen-reader-text'>Home</p>
                 <svg viewBox="0 0 512 512" className='link-icons w-10'>
                     <g>
                         <path d="M46.82,20.5l-0.29,228.23c0,0,13.49,112.1,129.47,110.38l0.29-231.96C176.29,127.15,154.76,16.62,46.82,20.5z"

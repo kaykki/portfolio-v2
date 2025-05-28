@@ -23,7 +23,7 @@ body {
 @theme {
 	--color-primary: #004D57;
 	--color-secondary: #F0F0F0;
-	--color-accent: #1E8572;
+	--color-accent: #166456;
 	--breakpoint-mobile-s: 25rem; /*400px*/
 	--breakpoint-mobile-l: 30rem; /*480px*/
 	--breakpoint-tablet-m: 38rem; /*680px*/
@@ -175,5 +175,11 @@ body {
 		my-0 mx-auto w-fit py-2 px-4 
 		
 		bg-primary text-secondary rounded-t-2xl
+	}
+
+	.screen-reader-text {
+		@apply
+		absolute
+		left-[-9999px] top-[-9999px]
 	}
 }

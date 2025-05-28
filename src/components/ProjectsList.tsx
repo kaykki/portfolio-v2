@@ -67,8 +67,9 @@ export default function ProjectsList() {
                                 src={project._embedded['wp:featuredmedia'][0].source_url}
                                 alt={project.title.rendered}
                                 fill
-                                loading="lazy"
-                                className="object-cover rounded-md opacity-35"/>
+                                priority
+                                className="object-cover rounded-md opacity-35"
+                            />
                             <svg
                                 className="absolute top-4 right-4"
                                 width="20"
