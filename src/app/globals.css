@@ -96,14 +96,17 @@ body {
 	.project-list {
 		@apply
 		order-4 tablet-m:order-2
+
 		col-span-2 tablet-m:col-span-1
 		tablet-m:row-span-4
+
 		flex gap-4 flex-col 
 		relative
 	}
 
 	.tech-stack {
 		@apply
+		min-h-[25rem]
 		order-5 tablet-m:order-4
 
 		col-span-2 tablet-m:col-span-2

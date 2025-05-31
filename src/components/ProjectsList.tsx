@@ -70,14 +70,14 @@ export default function ProjectsList() {
                                 priority
                                 className="object-cover rounded-md opacity-35"
                             />
-                            <svg
+                            {/* <svg
                                 className="absolute top-4 right-4"
                                 width="20"
                                 viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path className="fill-secondary" d="m12.002 2.005c5.518 0 9.998 4.48 9.998 9.997 0 5.518-4.48 9.998-9.998 9.998-5.517 0-9.997-4.48-9.997-9.998 0-5.517 4.48-9.997 9.997-9.997zm0 8c-.414 0-.75.336-.75.75v5.5c0 .414.336.75.75.75s.75-.336.75-.75v-5.5c0-.414-.336-.75-.75-.75zm-.002-3c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1z" />
-                            </svg>
-                            <div className="absolute bottom-4 flex flex-col gap-2 z-20">
+                            </svg> */}
+                            <div className="absolute bottom-[10%] left-[3%] flex flex-col gap-2 z-20">
 
                                 <h2 className="sub-title text-secondary">{project.title.rendered}</h2>
 

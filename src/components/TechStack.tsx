@@ -8,10 +8,10 @@ import Image from "next/image";
 export default function TechStack() {
 
     const [category, setCategory] = useState("");
-    const [currentStack, currentSetStack] = useState<Stack[]>([]);
+    const [currentStack, setCurrentSetStack] = useState<Stack[]>([]);
    
     useEffect(() => {
-        fetchTechStack(category).then(data => currentSetStack(data)); 
+        fetchTechStack(category).then(data => setCurrentSetStack(data)); 
     }, [category]);
 
     return (
