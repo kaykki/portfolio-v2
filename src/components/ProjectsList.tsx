@@ -81,6 +81,8 @@ export default function ProjectsList() {
 
                                 <h2 className="sub-title text-secondary">{project.title.rendered}</h2>
 
+                                {/* <p>{project.acf.showcase.project_overview.slice(0, 60)}...</p> */}
+
                                 {/* Tech Stack */}
                                 <ul className="flex flex-wrap gap-2 items-center justify-baseline">
                                     {project.acf.development.tools.slice(0, 3).map((tools: any) => (
