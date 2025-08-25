@@ -22,12 +22,12 @@ export default async function Project({
 
     return (
         <main className="main-layout">
-            <video autoPlay className="order-1 col-span-2 rounded-md shadow-md mobile-s:row-start-2">
+            <video autoPlay className="order-2 col-span-2 rounded-md shadow-md mobile-s:row-start-2">
                 <source 
                     src={projectData.acf.showcase.project_preview.url} 
                     type={projectData.acf.showcase.project_preview.mime_type}/>
             </video>
-            <section className="card order-3 col-span-2 row-span-2">
+            <section className="card-coloured order-3 col-span-2 row-span-2">
                 <h2 className="title">Overview</h2>
                 <p className="paragraph">{projectData.acf.showcase.project_overview}</p>
             </section>

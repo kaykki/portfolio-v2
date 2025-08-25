@@ -27,7 +27,7 @@ export default function Header() {
 
     return (
         <header className={`
-            card-coloured w-full h-full flex items-center z-100 ${pathname.includes("/projects/") ? "col-span-2" : ""}`}>
+            card-coloured w-full h-full flex items-center z-100 ${pathname.includes("/projects/") ? "col-span-2 tablet-m:col-span-1" : ""}`}>
             <Link href={"/"}>
                 <p className='screen-reader-text'>Home</p>
                 <svg viewBox="0 0 512 512" className='link-icons w-10'>

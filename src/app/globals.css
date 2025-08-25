@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-	--background: #FFFFFF;
+	--background: #0D1F21;
 	--foreground: #171717;
 }
 
@@ -21,8 +21,8 @@ body {
 }
 
 @theme {
-	--color-primary: #004D57;
-	--color-secondary: #F0F0F0;
+	--color-primary: #166456;
+	--color-secondary: #F1F0E4;
 	--color-accent: #166456;
 	--breakpoint-mobile-s: 25rem; /*400px*/
 	--breakpoint-mobile-l: 30rem; /*480px*/
